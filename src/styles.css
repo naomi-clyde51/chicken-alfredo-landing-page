@@ -1,0 +1,86 @@
+:root {
+--text-color: #000000ce;
+--font-primary: font-family
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    /*bg img*/
+    background: linear-gradient(#ffb38d, #ffc88d);
+    font-family: "Courier New", Courier, monospace;
+height: 89vh;
+}
+
+/* MAIN */
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background-color: #fffbf8;
+    margin: 5% 0px 20px 75px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 15px #0000002e;
+    padding: 15px;
+}
+
+.container header {
+    padding: 25px;
+}
+
+h1,
+h2,
+p {
+    color: var(--text-color);
+}
+
+header {
+    padding: 15px 15px 0px 15px;
+    
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 32px;
+    padding: 8px;
+    font-weight: 500;
+}
+
+
+.food-desc p {
+    font-size: 16px;
+    padding: 5px 10px 15px 10px;
+    margin: 10px;
+    line-height: 1.2;
+}
+
+button {
+    font-size: 20px;
+    color: #fffdfb;
+    padding: 15px;
+    margin: 16px;
+    border-radius: 50px;
+    border-style: none;
+    /*background-color: #0881a3;*/
+    background-color: rgb(235, 159, 52);
+    transition: all 65ms ease-in-out;
+}
+
+button:hover {
+    /*background-color: #0881a392;*/
+    background-color: rgba(235, 159, 52, 0.638);
+
+}
+
+footer {
+    width: 100%;
+    color: #00000084;
+}
