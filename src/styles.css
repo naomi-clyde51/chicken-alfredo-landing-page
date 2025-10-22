@@ -1,7 +1,15 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+/* GENERAL */
+
 :root {
---text-color: #000000ce;
---font-primary: font-family
+--text-color: #000000b8;
+--font-primary: roboto, sans-serif;
+--font-secondary: "Style Script",
+    cursive;
 }
+
 
 * {
     padding: 0;
@@ -9,27 +17,56 @@
     text-align: center;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     /*bg img*/
-    background: linear-gradient(#ffb38d, #ffc88d);
-    font-family: "Courier New", Courier, monospace;
-height: 89vh;
+    background-image: url("../src/img/stock-photo-plate-with-delicious-chicken-alfredo-on-wooden-table-620408093.jpg");
+    background-size: cover;
+    background-color: linear-gradient(#ffb38d, #ffc88d);
+    background-position: right 55% bottom 55%;
+    font-family: var(--font-primary);
+    height: 100vh;
+}
+
+/* ANIMATIONS */
+
+@keyframes load-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* MAIN */
 
-.container {
-    width: 100%;
-    max-width: 650px;
-    background-color: #fffbf8;
-    margin: 5% 0px 20px 75px;
+.fixed-container {
+    animation: load-in 1s ease-in forwards;
+    background-color: #fffff8;
+    position: fixed;
+        top: 100px;
+        left: 65px;
+        padding: 15px;
     border-radius: 25px;
     box-shadow: 2px 2px 15px #0000002e;
-    padding: 15px;
 }
 
-.container header {
-    padding: 25px;
+header h2 {
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+header {
+    padding: 25px 25px 5px 25px;
 }
 
 h1,
@@ -38,13 +75,8 @@ p {
     color: var(--text-color);
 }
 
-header {
-    padding: 15px 15px 0px 15px;
-    
-}
-
 h1 {
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 600;
 }
 
@@ -57,8 +89,8 @@ h2 {
 
 .food-desc p {
     font-size: 16px;
-    padding: 5px 10px 15px 10px;
-    margin: 10px;
+    padding: 5px 10px;
+    margin: 10px 10px 30px 10px;
     line-height: 1.2;
 }
 
@@ -66,7 +98,7 @@ button {
     font-size: 20px;
     color: #fffdfb;
     padding: 15px;
-    margin: 16px;
+    margin: 16px 0px;
     border-radius: 50px;
     border-style: none;
     /*background-color: #0881a3;*/
@@ -80,7 +112,20 @@ button:hover {
 
 }
 
-footer {
-    width: 100%;
-    color: #00000084;
+.contact {
+    padding: 5px 20px;
+}
+
+.contact-info {
+    font-size: 16px;
+    color: var(--text-color);
+    padding: 4px 0px;
+}
+
+footer p {
+    position: fixed;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+    color: var(--text-color);
 }
