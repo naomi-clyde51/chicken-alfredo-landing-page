@@ -8,26 +8,81 @@
 --font-primary: roboto, sans-serif;
 --font-secondary: "Style Script",
     cursive;
+--button-clear: black;
 }
 
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    text-decoration: none;
+    list-style: none;
     text-align: center;
 }
 
-html, body {
-    height: 100%;
+.hero {
+    min-height: 100vh;
+    background-image: url("../src/img/pexels-enginakyurt-1435898.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    border-bottom: 2px solid #fff;
+    background-color: #5c56526c;
+}
+
+.logo {
+    width: 210px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: gray;
+    border-bottom: 2px solid red;
+}
+
+nav button {
+    padding: 12px 35px;
+    border: none;
+    border-radius: 2rem;
+    background: var(--button-clear);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    scale: 0.8;
 }
 
 body {
-    /*bg img*/
-    background-image: url("../src/img/stock-photo-plate-with-delicious-chicken-alfredo-on-wooden-table-620408093.jpg");
-    background-size: cover;
     background-color: linear-gradient(#ffb38d, #ffc88d);
-    background-position: right 55% bottom 55%;
-    font-family: var(--font-primary);
     height: 100vh;
 }
 
@@ -47,26 +102,15 @@ body {
 
 /* MAIN */
 
-.fixed-container {
+.content {
     animation: load-in 1s ease-in forwards;
     background-color: #fffff8;
-    position: fixed;
-        top: 100px;
-        left: 65px;
-        padding: 15px;
+    position: absolute;
+        top: 21%;
+        left: 53px;
+    padding: 15px;
     border-radius: 25px;
     box-shadow: 2px 2px 15px #0000002e;
-}
-
-header h2 {
-    font-family: var(--font-secondary);
-    font-weight: 300;
-    font-size: 40px;
-    letter-spacing: 2px;
-}
-
-header {
-    padding: 25px 25px 5px 25px;
 }
 
 h1,
@@ -75,23 +119,29 @@ p {
     color: var(--text-color);
 }
 
-h1 {
-    font-size: 50px;
+header {
+    padding: 25px 25px 5px 25px;
+}
+
+header h1 {
+    font-size: 40px;
     font-weight: 600;
 }
 
-h2 {
-    font-size: 32px;
+header h2 {
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 2px;
     padding: 8px;
     font-weight: 500;
 }
 
-
-.food-desc p {
+.content .food-desc p {
     font-size: 16px;
     padding: 5px 10px;
-    margin: 10px 10px 30px 10px;
-    line-height: 1.2;
+    line-height: 1.5;
+    margin: 5px;
 }
 
 button {
@@ -122,10 +172,102 @@ button:hover {
     padding: 4px 0px;
 }
 
-footer p {
-    position: fixed;
-        left: 0;
-        bottom: 0px;
-        width: 100%;
-    color: var(--text-color);
+footer {
+    background-color: black;
+    width: 100%;
 }
+
+footer p {
+    position: absolute;
+    left: 675px;
+    bottom: 0px;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+            font-size: 46px;
+        }
+    
+        header h2 {
+            font-size: 28px;
+        }
+
+                .content {
+                    position: absolute;
+                    top: 21%;
+                    left: 30px;
+                }
+    }
+
+@media screen and (max-width: 667px) {
+    header h1 {
+            font-size: 40px;
+        }
+    
+        header h2 {
+            font-size: 25px;
+        }
+    
+        .content {
+            position: absolute;
+            top: 30%;
+            left: 10px;
+        }
+    
+        .content .food-desc p {
+            font-size: 10px;
+        }
+    
+        footer p {
+            position: absolute;
+            left: 285px;
+        }
+    }
+        
+
+@media screen and (max-width: 768px) {
+    header h1 {
+            font-size: 46px;
+        }
+    
+        header h2 {
+            font-size: 28px;
+        }
+    
+        .content {
+            position: absolute;
+            top: 21%;
+            left: 10px;
+        }
+
+        .content .food-desc p {
+            font-size: 16px;
+        }
+    
+        footer p {
+                        position: absolute;
+                        left: 285px;
+                    }
+    }
+
+
+@media screen and (max-width: 1024px) {
+    header h1 {
+            font-size: 40px;
+        }
+    
+        header h2 {
+            font-size: 32px;
+        }
+
+        .content {
+            position: absolute;
+            top: 25%;
+            left: 25px;
+        }
+    
+        .content .food-desc p {
+            font-size: 20px;
+        }
+    }
